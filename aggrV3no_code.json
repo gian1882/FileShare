@@ -1,75 +1,17 @@
 {
-  "createdAt": 1625441925004,
-  "updatedAt": 1625467806329,
-  "name": "NoCode",
-  "id": "47ow",
+  "createdAt": 1626703563619,
+  "updatedAt": 1626969832340,
+  "name": "NoCode3",
+  "id": "3yot",
   "states": {
-    "trades": {
-      "liquidations": {
-        "id": "liquidations",
-        "amount": 50000,
-        "buyColor": "rgb(103,58,183)",
-        "sellColor": "rgb(103,58,183)",
-        "buyAudio": "play(329.63, ratio, ratio * 2, 0, 0.1, 'sine')",
-        "sellAudio": "play(440, ratio, ratio * 2, 0, 0.1, 'sine')"
-      },
-      "thresholds": [
-        {
-          "id": "threshold",
-          "amount": 100000,
-          "buyColor": "rgba(119, 148, 92, 0.5)",
-          "sellColor": "rgba(239, 67, 82, 0.5)",
-          "buyAudio": "play(659.26, Math.sqrt(ratio) / 10, 0.1 + Math.sqrt(ratio) * 0.23, 0)",
-          "sellAudio": "play(493.88, Math.sqrt(ratio * 1.5) / 10, 0.1 + Math.sqrt(ratio) * 0.23, 0)"
-        },
-        {
-          "id": "significant",
-          "amount": 250000,
-          "buyColor": "rgb(100, 157, 102)",
-          "sellColor": "rgb(239, 67, 82)",
-          "buyAudio": "play(659.26, 0.05 + Math.sqrt(ratio) / 10, 0.1 + ratio * 0.23, 0);\nplay(830.6, 0.05 + Math.sqrt(ratio) / 10, 0.1 + ratio * 0.23, 0.08)",
-          "sellAudio": "play(493.88, 0.05 + Math.sqrt(ratio * 1.5) / 10, 0.1 + ratio * 0.1, 0);\nplay(392, 0.05 + Math.sqrt(ratio * 1.5) / 10, 0.1 + ratio * 0.23, 0.08)"
-        },
-        {
-          "id": "huge",
-          "amount": 1000000,
-          "gif": "cash",
-          "buyColor": "rgb(59, 202, 109)",
-          "sellColor": "rgb(235, 30, 47)",
-          "buyAudio": "play(659.26, 0.05 + Math.sqrt(ratio) / 25, 0.1 + ratio * 0.23, 0);\nplay(830.6, 0.05 + Math.sqrt(ratio) / 25, 0.1 + ratio * 0.23, 0.08);\nplay(987.76, 0.05 + Math.sqrt(ratio) / 25, 0.1 + ratio * 0.23, 0.16);\nplay(1318.52, 0.05 + Math.sqrt(ratio) / 10, 0.1 + ratio * 0.23, 0.24)",
-          "sellAudio": "play(493.88, 0.05 + Math.sqrt(ratio) / 25, 0.1 + ratio * 0.23, 0);\nplay(369.99, 0.05 + Math.sqrt(ratio * 1.5) / 10, 0.2, 0.08);\nplay(293.66, 0.05 + Math.sqrt(ratio * 1.5) / 10, 0.2, 0.16);\nplay(246.94, 0.05 + Math.sqrt(ratio * 1.5) / 10, 0.1 + ratio * 0.23, 0.24)"
-        },
-        {
-          "id": "rare",
-          "amount": 10000000,
-          "gif": "explosion",
-          "buyColor": "rgb(0, 255, 127)",
-          "sellColor": "rgb(217, 31, 28)",
-          "buyAudio": "play(659.26, 0.05 + Math.sqrt(ratio) / 25, 0.1 + ratio * 0.13, 0);\nplay(830.6, 0.05 + Math.sqrt(ratio) / 25, 0.1 + ratio * 0.13, 0.08);\nplay(987.76, 0.05 + Math.sqrt(ratio) / 25, 0.1 + ratio * 0.13, 0.16);\nplay(1318.52, 0.05 + Math.sqrt(ratio) / 10, 0.1 + ratio * 0.13, 0.24)",
-          "sellAudio": "play(493.88, 0.05 + Math.sqrt(ratio) / 25, 0.1 + ratio * 0.13, 0);\nplay(369.99, 0.05 + Math.sqrt(ratio * 1.5) / 10, 0.2, 0.08);\nplay(293.66, 0.05 + Math.sqrt(ratio * 1.5) / 10, 0.2, 0.16);\nplay(246.94, 0.05 + Math.sqrt(ratio * 1.5) / 10, 0.1 + ratio * 0.13, 0.24)"
-        }
-      ],
-      "audioThreshold": null,
-      "multipliers": {},
-      "showThresholdsAsTable": true,
-      "maxRows": 100,
-      "muted": false,
-      "audioPitch": null,
-      "audioVolume": null,
-      "showTradesPairs": false,
-      "tradeType": "trades",
-      "showLogos": true,
-      "monochromeLogos": true,
-      "_id": "trades"
-    },
     "liquidations": {
       "liquidations": {
         "id": "liquidations",
         "amount": 100000,
         "buyColor": "rgb(103,58,183)",
         "sellColor": "rgb(103,58,183)",
-        "buyAudio": "play(329.63, ratio, ratio * 2, 0, 0.1, 'sine')",
-        "sellAudio": "play(440, ratio, ratio * 2, 0, 0.1, 'sine')"
+        "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*5,0,,,'sine')\nplay(329.63, srqtR, srqtR*8,0.1,,,'sine')",
+        "sellAudio": "var srqtR = Math.min(1, gain / 6)\nplay(440, srqtR, srqtR*5,0,,,'sine')\nplay(440, srqtR, srqtR*8,0.1,,,'sine')"
       },
       "thresholds": [
         {
@@ -77,16 +19,16 @@
           "amount": 10000,
           "buyColor": "rgba(236,64,122,0.5)",
           "sellColor": "rgba(255,152,0,0.5)",
-          "buyAudio": "play(329.63, ratio / 10, ratio, 0.08, .1, 'sine');",
-          "sellAudio": "play(440, ratio / 10, ratio, 0.08, .05, 'sine');"
+          "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*2,0,,,'sine')\nplay(329.63, srqtR, srqtR*4,0.08,,,'sine')",
+          "sellAudio": "var srqtR = Math.min(1, gain / 6)\nplay(440, srqtR, srqtR*2,0,,,'sine')\nplay(440, srqtR, srqtR*4,0.08,,,'sine')"
         },
         {
           "id": "significant",
           "amount": 25000,
           "buyColor": "rgba(236,64,122,0.6)",
           "sellColor": "rgba(255,152,0,0.7)",
-          "buyAudio": "play(329.63, ratio / 10, ratio, 0.08, .1, 'sine');",
-          "sellAudio": "play(440, ratio / 10, ratio, 0.08, .1, 'sine');"
+          "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*4,0,,,'sine')\nplay(329.63, srqtR, srqtR*6,0.08,,,'sine')",
+          "sellAudio": "var srqtR = Math.min(1, gain / 6)\nplay(440, srqtR, srqtR*4,0,,,'sine')\nplay(440, srqtR, srqtR*6,0.08,,,'sine')"
         },
         {
           "id": "huge",
@@ -94,8 +36,8 @@
           "gif": "rekt",
           "buyColor": "rgba(236,64,122,0.7)",
           "sellColor": "rgba(255,152,0,0.8)",
-          "buyAudio": "play(329.63, ratio / 10, ratio, 0.08, .1, 'sine');",
-          "sellAudio": "play(440, ratio / 10, ratio, 0.08, .1, 'sine');"
+          "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*4,0,,,'sine')\nplay(329.63, srqtR, srqtR*8,0.08,,,'sine')",
+          "sellAudio": "var srqtR = Math.min(1, gain / 6)\nplay(440, srqtR, srqtR*4,0,,,'sine')\nplay(440, srqtR, srqtR*8,0.08,,,'sine')"
         },
         {
           "id": "rare",
@@ -103,8 +45,8 @@
           "gif": "explosion",
           "buyColor": "rgb(156,39,176)",
           "sellColor": "rgb(255,235,59)",
-          "buyAudio": "play(329.63, ratio / 10, ratio, 0.08, .1, 'sine');",
-          "sellAudio": "play(440, ratio / 10, ratio, 0.08, .1, 'sine');"
+          "buyAudio": "var srqtR = Math.min(1, gain / 10)\nplay(329.63, srqtR, 1,0,,,'sine')\nplay(329.63, srqtR, srqtR*10,0.08,,,'sine')",
+          "sellAudio": "var srqtR = Math.min(1, gain / 10)\nplay(440, srqtR, 1,0,,,'sine')\nplay(440, srqtR, srqtR*10,0.08,,,'sine')"
         }
       ],
       "audioThreshold": null,
@@ -122,80 +64,84 @@
     },
     "panes": {
       "_id": "panes",
-      "layout": [
-        {
-          "i": "statss-pane",
-          "x": 20,
-          "y": 18,
-          "w": 2,
-          "h": 1,
-          "type": "stats",
-          "moved": false
-        },
-        {
-          "i": "counterss-pane",
-          "x": 0,
-          "y": 22,
-          "w": 20,
-          "h": 2,
-          "type": "counters",
-          "moved": false
-        },
-        {
-          "i": "charts-pane2",
-          "x": 0,
-          "y": 14,
-          "w": 20,
-          "h": 8,
-          "type": "chart",
-          "moved": false
-        },
-        {
-          "i": "trades-copy",
-          "x": 22,
-          "y": 0,
-          "w": 2,
-          "h": 18,
-          "type": "trades",
-          "moved": false
-        },
-        {
-          "i": "charts-pane",
-          "x": 0,
-          "y": 7,
-          "w": 20,
-          "h": 7,
-          "type": "chart",
-          "moved": false
-        },
-        {
-          "x": 0,
-          "y": 0,
-          "w": 20,
-          "h": 7,
-          "i": "chart",
-          "type": "chart",
-          "moved": false
-        },
-        {
-          "x": 20,
-          "y": 0,
-          "w": 2,
-          "h": 18,
-          "i": "trades",
-          "type": "trades",
-          "moved": false
-        },
-        {
-          "x": 22,
-          "y": 18,
-          "w": 2,
-          "h": 6,
-          "i": "liquidations",
-          "type": "trades",
-          "moved": false
-        }
-      ],
+      "layouts": {
+        "lg": [
+          {
+            "i": "statss-pane",
+            "x": 20,
+            "y": 18,
+            "w": 2,
+            "h": 1,
+            "type": "stats",
+            "moved": false
+          },
+          {
+            "i": "counterss-pane",
+            "x": 0,
+            "y": 21,
+            "w": 20,
+            "h": 3,
+            "type": "counters",
+            "moved": false,
+            "isolated": true
+          },
+          {
+            "i": "charts-pane2",
+            "x": 0,
+            "y": 14,
+            "w": 20,
+            "h": 7,
+            "type": "chart",
+            "moved": false,
+            "isolated": true
+          },
+          {
+            "i": "trades-copy",
+            "x": 22,
+            "y": 0,
+            "w": 2,
+            "h": 18,
+            "type": "trades",
+            "moved": false
+          },
+          {
+            "i": "charts-pane",
+            "x": 0,
+            "y": 7,
+            "w": 20,
+            "h": 7,
+            "type": "chart",
+            "moved": false
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 20,
+            "h": 7,
+            "i": "chart",
+            "type": "chart",
+            "moved": false
+          },
+          {
+            "x": 20,
+            "y": 0,
+            "w": 2,
+            "h": 18,
+            "i": "trades",
+            "type": "trades",
+            "moved": false
+          },
+          {
+            "x": 22,
+            "y": 18,
+            "w": 2,
+            "h": 6,
+            "i": "liquidations",
+            "type": "trades",
+            "moved": false
+          }
+        ]
+      },
       "panes": {
         "chart": {
           "id": "chart",
@@ -472,10 +418,34 @@
           "series": [
             "totalvolume"
           ]
+        },
+        "volume_buy_sell": {
+          "script": "plotcloudarea(-vsell, vbuy)\nplotline(0, color=rgba(255,255,255,.25), lineStyle=2)",
+          "enabled": false,
+          "name": "Buy/sells volume",
+          "options": {
+            "priceScaleId": "volume",
+            "priceFormat": {
+              "type": "volume"
+            },
+            "upColor": "#3BCA6D",
+            "downColor": "#EB1E2F",
+            "scaleMargins": {
+              "top": 0.91,
+              "bottom": 0
+            }
+          },
+          "id": "volume_buy_sell",
+          "createdAt": 1626278118777,
+          "updatedAt": null,
+          "series": [
+            "vsell-vbuy",
+            ""
+          ]
         }
       },
       "resizingIndicator": null,
-      "timeframe": 10,
+      "timeframe": "100t",
       "refreshRate": 500,
       "showLegend": true,
       "showHorizontalGridlines": false,
@@ -515,7 +485,7 @@
         "fetched": true
       },
       "HITBTC": {
-        "fetched": false
+        "fetched": true
       },
       "HUOBI": {
         "fetched": true
@@ -527,7 +497,7 @@
         "fetched": true
       },
       "PHEMEX": {
-        "fetched": false
+        "fetched": true
       },
       "POLONIEX": {
         "fetched": true
@@ -596,10 +566,28 @@
             "cum-bitfinex-btcusdvbuy-binance-btcusdtvbuy-okex-btc-usdtvbuy-kraken-xbt-usdvbuy-coinbase-btc-usdvbuy-poloniex-usdt-btcvbuy-huobi-btcusdtvbuy-bitstamp-btcusdvbuy-bitfinex-btcusdvsell-binance-btcusdtvsell-okex-btc-usdtvsell-kraken-xbt-usdvsell-coinbase-btc-usdvsell-poloniex-usdt-btcvsell-huobi-btcusdtvsell-bitstamp-btcusdvsell"
           ],
           "unsavedChanges": true
+        },
+        "cvd": {
+          "script": "plotline(cum(vbuy - vsell))",
+          "name": "CVD",
+          "description": "Cumulative Volume Delta",
+          "options": {
+            "priceScaleId": "cvd",
+            "priceFormat": {
+              "type": "volume"
+            },
+            "color": "#ffe100"
+          },
+          "id": "cvd",
+          "createdAt": 1626182240743,
+          "updatedAt": null,
+          "series": [
+            "cum-vbuy-vsell"
+          ]
         }
       },
       "resizingIndicator": null,
-      "timeframe": 10,
+      "timeframe": "100t",
       "refreshRate": 500,
       "showLegend": true,
       "showHorizontalGridlines": false,
@@ -610,89 +598,38 @@
       "watermarkColor": "rgba(255,255,255,.1)",
       "_id": "charts-pane"
     },
-    "trades-copy": {
-      "liquidations": {
-        "id": "liquidations",
-        "amount": 50000,
-        "buyColor": "rgb(103,58,183)",
-        "sellColor": "rgb(103,58,183)",
-        "buyAudio": "play(329.63, ratio, ratio * 2, 0, 0.1, 'sine')",
-        "sellAudio": "play(440, ratio, ratio * 2, 0, 0.1, 'sine')"
-      },
-      "thresholds": [
-        {
-          "id": "threshold",
-          "amount": 100000,
-          "buyColor": "rgba(119, 148, 92, 0.5)",
-          "sellColor": "rgba(239, 67, 82, 0.5)",
-          "buyAudio": "play(659.26, Math.sqrt(ratio) / 10, 0.1 + Math.sqrt(ratio) * 0.23, 0)",
-          "sellAudio": "play(493.88, Math.sqrt(ratio * 1.5) / 10, 0.1 + Math.sqrt(ratio) * 0.23, 0)"
-        },
-        {
-          "id": "significant",
-          "amount": 250000,
-          "buyColor": "rgb(100, 157, 102)",
-          "sellColor": "rgb(239, 67, 82)",
-          "buyAudio": "play(659.26, 0.05 + Math.sqrt(ratio) / 10, 0.1 + ratio * 0.23, 0);\nplay(830.6, 0.05 + Math.sqrt(ratio) / 10, 0.1 + ratio * 0.23, 0.08)",
-          "sellAudio": "play(493.88, 0.05 + Math.sqrt(ratio * 1.5) / 10, 0.1 + ratio * 0.1, 0);\nplay(392, 0.05 + Math.sqrt(ratio * 1.5) / 10, 0.1 + ratio * 0.23, 0.08)"
-        },
-        {
-          "id": "huge",
-          "amount": 1000000,
-          "gif": "cash",
-          "buyColor": "rgb(59, 202, 109)",
-          "sellColor": "rgb(235, 30, 47)",
-          "buyAudio": "play(659.26, 0.05 + Math.sqrt(ratio) / 25, 0.1 + ratio * 0.23, 0);\nplay(830.6, 0.05 + Math.sqrt(ratio) / 25, 0.1 + ratio * 0.23, 0.08);\nplay(987.76, 0.05 + Math.sqrt(ratio) / 25, 0.1 + ratio * 0.23, 0.16);\nplay(1318.52, 0.05 + Math.sqrt(ratio) / 10, 0.1 + ratio * 0.23, 0.24)",
-          "sellAudio": "play(493.88, 0.05 + Math.sqrt(ratio) / 25, 0.1 + ratio * 0.23, 0);\nplay(369.99, 0.05 + Math.sqrt(ratio * 1.5) / 10, 0.2, 0.08);\nplay(293.66, 0.05 + Math.sqrt(ratio * 1.5) / 10, 0.2, 0.16);\nplay(246.94, 0.05 + Math.sqrt(ratio * 1.5) / 10, 0.1 + ratio * 0.23, 0.24)"
-        },
-        {
-          "id": "rare",
-          "amount": 10000000,
-          "gif": "explosion",
-          "buyColor": "rgb(0, 255, 127)",
-          "sellColor": "rgb(217, 31, 28)",
-          "buyAudio": "play(659.26, 0.05 + Math.sqrt(ratio) / 25, 0.1 + ratio * 0.13, 0);\nplay(830.6, 0.05 + Math.sqrt(ratio) / 25, 0.1 + ratio * 0.13, 0.08);\nplay(987.76, 0.05 + Math.sqrt(ratio) / 25, 0.1 + ratio * 0.13, 0.16);\nplay(1318.52, 0.05 + Math.sqrt(ratio) / 10, 0.1 + ratio * 0.13, 0.24)",
-          "sellAudio": "play(493.88, 0.05 + Math.sqrt(ratio) / 25, 0.1 + ratio * 0.13, 0);\nplay(369.99, 0.05 + Math.sqrt(ratio * 1.5) / 10, 0.2, 0.08);\nplay(293.66, 0.05 + Math.sqrt(ratio * 1.5) / 10, 0.2, 0.16);\nplay(246.94, 0.05 + Math.sqrt(ratio * 1.5) / 10, 0.1 + ratio * 0.13, 0.24)"
-        }
-      ],
-      "audioThreshold": null,
-      "multipliers": {},
-      "showThresholdsAsTable": true,
-      "maxRows": 100,
-      "muted": false,
-      "audioPitch": null,
-      "audioVolume": null,
-      "showTradesPairs": false,
-      "tradeType": "trades",
-      "showLogos": true,
-      "monochromeLogos": true,
-      "_id": "trades-copy"
-    },
     "settings": {
       "_id": "settings",
       "preferQuoteCurrencySize": true,
-      "aggregateTrades": true,
+      "aggregationLength": 1,
       "disableAnimations": true,
       "calculateSlippage": null,
       "decimalPrecision": null,
+      "autoHideHeaders": true,
       "theme": "dark",
       "backgroundColor": "rgb(23,27,41)",
       "textColor": "",
       "timezoneOffset": 0,
       "useAudio": false,
       "audioVolume": 1,
-      "audioDelay": false,
-      "audioPingPong": true,
-      "audioCompressor": false,
-      "audioFilter": true,
+      "audioFilters": {
+        "HighPassFilter": true,
+        "LowPassFilter": false,
+        "Compressor": false,
+        "Delay": false,
+        "PingPongDelay": true,
+        "Chorus": false
+      },
       "settings": [
         "other",
         "chart",
         "stats",
         "counters",
-        "audio"
+        "audio",
+        "workspaces"
       ],
-      "recentColors": []
+      "recentColors": [],
+      "aggregateTrades": true
     },
     "charts-pane2": {
       "indicatorsErrors": {},
@@ -732,7 +669,7 @@
         }
       },
       "resizingIndicator": null,
-      "timeframe": 10,
+      "timeframe": "100t",
       "refreshRate": 500,
       "showLegend": true,
       "showHorizontalGridlines": false,
@@ -742,6 +679,179 @@
       "showWatermark": true,
       "watermarkColor": "rgba(255,255,255,.1)",
       "_id": "charts-pane2"
+    },
+    "counterss-pane": {
+      "granularity": 5000,
+      "liquidationsOnly": false,
+      "steps": [
+        30000,
+        60000,
+        900000,
+        1800000
+      ],
+      "count": false,
+      "_id": "counterss-pane"
+    },
+    "statss-pane": {
+      "granularity": 5000,
+      "window": 60000,
+      "enableChart": false,
+      "buckets": {
+        "trades": {
+          "id": "trades",
+          "name": "TRADES",
+          "input": "cbuy + csell",
+          "enabled": true,
+          "color": "rgba(255, 255, 255, .25)",
+          "precision": 2,
+          "type": "line"
+        },
+        "vold": {
+          "id": "vold",
+          "name": "VOLUME Δ",
+          "input": "vbuy - vsell",
+          "enabled": true,
+          "color": "#40d745",
+          "type": "area"
+        },
+        "tradesd": {
+          "id": "tradesd",
+          "name": "TRADES Δ",
+          "input": "cbuy - csell",
+          "enabled": true,
+          "color": "#2196f3",
+          "precision": 2,
+          "type": "line"
+        },
+        "1hliq": {
+          "id": "1hliq",
+          "name": "1H LIQUIDATIONS Δ",
+          "window": 3600000,
+          "input": "lbuy-lsell",
+          "enabled": false,
+          "color": "value>0?'#43a047':'#f44336'",
+          "conditionnalColor": true,
+          "type": "histogram"
+        }
+      },
+      "_id": "statss-pane"
+    },
+    "trades": {
+      "liquidations": {
+        "id": "liquidations",
+        "amount": 100000,
+        "buyColor": "rgb(103,58,183)",
+        "sellColor": "rgb(103,58,183)",
+        "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*5,0,,,'sine')\nplay(329.63, srqtR, srqtR*8,0.1,,,'sine')",
+        "sellAudio": "var srqtR = Math.min(1, gain / 6)\nplay(440, srqtR, srqtR*5,0,,,'sine')\nplay(440, srqtR, srqtR*8,0.1,,,'sine')"
+      },
+      "thresholds": [
+        {
+          "id": "threshold",
+          "amount": 100000,
+          "buyColor": "rgba(119, 148, 92, 0.5)",
+          "sellColor": "rgba(239, 67, 82, 0.5)",
+          "buyAudio": "play(659.26, gain / 10, 0.1 + gain / 6)",
+          "sellAudio": "play(493.88, gain * 1.5 / 10, 0.1 + gain / 6)"
+        },
+        {
+          "id": "significant",
+          "amount": 250000,
+          "buyColor": "rgb(100, 157, 102)",
+          "sellColor": "rgb(239, 67, 82)",
+          "buyAudio": "play(659.26, 0.05 + gain / 10, 0.2 + ratio * 0.23,0,,0);\nplay(830.6, 0.05 + gain / 10, 0.2 + ratio * 0.23, 0.08,,0)",
+          "sellAudio": "play(493.88, 0.05 + gain * 1.5 / 10, 0.2 + ratio * 0.23,0,,0);\nplay(392, 0.05 + gain * 1.5 / 10, 0.2 + ratio * 0.23, 0.08,,0)"
+        },
+        {
+          "id": "huge",
+          "amount": 1000000,
+          "gif": "cash",
+          "buyColor": "rgb(59, 202, 109)",
+          "sellColor": "rgb(235, 30, 47)",
+          "buyAudio": "play(659.26, 0.05 + gain / 25, 0.1 + ratio * 0.23, 0,,0);\nplay(830.6, 0.05 + gain / 25, 0.1 + ratio * 0.23, 0.08,,0);\nplay(987.76, 0.05 + gain / 25, 0.1 + ratio * 0.23, 0.16,,0);\nplay(1318.52, 0.05 + gain / 10, 0.1 + ratio * 0.23, 0.24,,0)",
+          "sellAudio": "play(493.88, 0.05 + gain / 25, 0.1 + ratio * 0.23, 0,,0);\nplay(369.99, 0.05 + gain * 1.5 / 10, 0.2, 0.08,,0);\nplay(293.66, 0.05 + gain * 1.5 / 10, 0.2, 0.16,,0);\nplay(246.94, 0.05 + gain * 1.5 / 10, 0.1 + ratio * 0.23, 0.24,,0)"
+        },
+        {
+          "id": "rare",
+          "amount": 10000000,
+          "gif": "explosion",
+          "buyColor": "rgb(0, 255, 127)",
+          "sellColor": "rgb(217, 31, 28)",
+          "buyAudio": "play(659.26, 0.05 + gain / 25, 0.1 + ratio * 0.13, 0,,0);\nplay(830.6, 0.05 + gain / 25, 0.1 + ratio * 0.13, 0.08,,0);\nplay(987.76, 0.05 + gain / 25, 0.1 + ratio * 0.13, 0.16,,0);\nplay(1318.52, 0.05 + gain / 10, 0.1 + ratio * 0.13, 0.24,,0)",
+          "sellAudio": "play(493.88, 0.05 + gain / 25, 0.1 + ratio * 0.13, 0,,0);\nplay(369.99, 0.05 + gain * 1.5 / 10, 0.2, 0.08,,0);\nplay(293.66, 0.05 + gain * 1.5 / 10, 0.2, 0.16,,0);\nplay(246.94, 0.05 + gain * 1.5 / 10, 0.1 + ratio * 0.13, 0.24,,0)"
+        }
+      ],
+      "audioThreshold": null,
+      "multipliers": {},
+      "showThresholdsAsTable": true,
+      "maxRows": 100,
+      "muted": false,
+      "audioPitch": null,
+      "audioVolume": null,
+      "showTradesPairs": false,
+      "tradeType": "both",
+      "showLogos": true,
+      "monochromeLogos": true,
+      "_id": "trades"
+    },
+    "trades-copy": {
+      "liquidations": {
+        "id": "liquidations",
+        "amount": 100000,
+        "buyColor": "rgb(103,58,183)",
+        "sellColor": "rgb(103,58,183)",
+        "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*5,0,,,'sine')\nplay(329.63, srqtR, srqtR*8,0.1,,,'sine')",
+        "sellAudio": "var srqtR = Math.min(1, gain / 6)\nplay(440, srqtR, srqtR*5,0,,,'sine')\nplay(440, srqtR, srqtR*8,0.1,,,'sine')"
+      },
+      "thresholds": [
+        {
+          "id": "threshold",
+          "amount": 100000,
+          "buyColor": "rgba(119, 148, 92, 0.5)",
+          "sellColor": "rgba(239, 67, 82, 0.5)",
+          "buyAudio": "play(659.26, gain / 10, 0.1 + gain / 6)",
+          "sellAudio": "play(493.88, gain * 1.5 / 10, 0.1 + gain / 6)"
+        },
+        {
+          "id": "significant",
+          "amount": 250000,
+          "buyColor": "rgb(100, 157, 102)",
+          "sellColor": "rgb(239, 67, 82)",
+          "buyAudio": "play(659.26, 0.05 + gain / 10, 0.2 + ratio * 0.23,0,,0);\nplay(830.6, 0.05 + gain / 10, 0.2 + ratio * 0.23, 0.08,,0)",
+          "sellAudio": "play(493.88, 0.05 + gain * 1.5 / 10, 0.2 + ratio * 0.23,0,,0);\nplay(392, 0.05 + gain * 1.5 / 10, 0.2 + ratio * 0.23, 0.08,,0)"
+        },
+        {
+          "id": "huge",
+          "amount": 1000000,
+          "gif": "cash",
+          "buyColor": "rgb(59, 202, 109)",
+          "sellColor": "rgb(235, 30, 47)",
+          "buyAudio": "play(659.26, 0.05 + gain / 25, 0.1 + ratio * 0.23, 0,,0);\nplay(830.6, 0.05 + gain / 25, 0.1 + ratio * 0.23, 0.08,,0);\nplay(987.76, 0.05 + gain / 25, 0.1 + ratio * 0.23, 0.16,,0);\nplay(1318.52, 0.05 + gain / 10, 0.1 + ratio * 0.23, 0.24,,0)",
+          "sellAudio": "play(493.88, 0.05 + gain / 25, 0.1 + ratio * 0.23, 0,,0);\nplay(369.99, 0.05 + gain * 1.5 / 10, 0.2, 0.08,,0);\nplay(293.66, 0.05 + gain * 1.5 / 10, 0.2, 0.16,,0);\nplay(246.94, 0.05 + gain * 1.5 / 10, 0.1 + ratio * 0.23, 0.24,,0)"
+        },
+        {
+          "id": "rare",
+          "amount": 10000000,
+          "gif": "explosion",
+          "buyColor": "rgb(0, 255, 127)",
+          "sellColor": "rgb(217, 31, 28)",
+          "buyAudio": "play(659.26, 0.05 + gain / 25, 0.1 + ratio * 0.13, 0,,0);\nplay(830.6, 0.05 + gain / 25, 0.1 + ratio * 0.13, 0.08,,0);\nplay(987.76, 0.05 + gain / 25, 0.1 + ratio * 0.13, 0.16,,0);\nplay(1318.52, 0.05 + gain / 10, 0.1 + ratio * 0.13, 0.24,,0)",
+          "sellAudio": "play(493.88, 0.05 + gain / 25, 0.1 + ratio * 0.13, 0,,0);\nplay(369.99, 0.05 + gain * 1.5 / 10, 0.2, 0.08,,0);\nplay(293.66, 0.05 + gain * 1.5 / 10, 0.2, 0.16,,0);\nplay(246.94, 0.05 + gain * 1.5 / 10, 0.1 + ratio * 0.13, 0.24,,0)"
+        }
+      ],
+      "audioThreshold": null,
+      "multipliers": {},
+      "showThresholdsAsTable": true,
+      "maxRows": 100,
+      "muted": false,
+      "audioPitch": null,
+      "audioVolume": null,
+      "showTradesPairs": false,
+      "tradeType": "both",
+      "showLogos": true,
+      "monochromeLogos": true,
+      "_id": "trades-copy"
     }
-  }
+  },
+  "version": 2
 }
